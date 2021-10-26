@@ -1,0 +1,5 @@
+# defaults.yaml
+---
+platform: cisco_ios
+username: admin
+password: cisco123
