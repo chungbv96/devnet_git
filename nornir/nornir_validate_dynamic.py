@@ -15,6 +15,9 @@ from nornir_netmiko import netmiko_send_config
 
 
 print("Nhap lenh show can kiem tra (neu can kiem tra nhieu lenh show thi moi lenh cach nhau 1 dau phay, Yeu Cau: Can phai nhap dung cu phap lenh):")
+
+
+
 commands = input("Enter your command: ")
 cmds = commands.split(",")
 

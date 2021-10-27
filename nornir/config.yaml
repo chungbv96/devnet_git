@@ -8,4 +8,4 @@ inventory:
 runners:
     plugin: threaded
     options:
-        num_workers: 100
+        num_workers: 100 #co the chay toi da cung luc 100 thiet bi

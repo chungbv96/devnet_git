@@ -4,3 +4,18 @@ SW1:
   hostname: 192.168.160.10
   groups:
     - cisco
+
+Router2-eve:
+  hostname: 192.168.100.2
+  groups:
+    - cisco
+
+Router3-eve:
+  hostname: 192.168.100.3
+  groups:
+    - cisco
+
+vMX:
+  hostname: 192.168.100.4
+  groups:
+    - juniper

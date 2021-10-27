@@ -1,6 +1,12 @@
 # groups.yaml
 ---
 cisco:
-  platform: cisco_ios
-  username: admin
+  platform: ios
+  hostname: admin
   password: cisco123
+  
+
+juniper:
+  platform: junos
+  username: lab
+  password: lab123

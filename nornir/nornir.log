@@ -145,3 +145,1432 @@ ValueError: Must specify either config_commands or config_file
 2021-10-26 08:04:34,225 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': ' show runnun'} on 1 hosts
 2021-10-26 08:04:42,669 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show tun\x08\x08'} on 1 hosts
 2021-10-26 08:05:00,715 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 1 hosts
+2021-10-26 08:10:06,298 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'command_string': 'int gi1/0/5'} on 1 hosts
+2021-10-26 08:10:07,042 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 42, in netmiko_send_config
+    raise ValueError("Must specify either config_commands or config_file")
+ValueError: Must specify either config_commands or config_file
+
+2021-10-26 08:10:07,079 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'command_string': ' shutdown'} on 1 hosts
+2021-10-26 08:10:08,162 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 42, in netmiko_send_config
+    raise ValueError("Must specify either config_commands or config_file")
+ValueError: Must specify either config_commands or config_file
+
+2021-10-26 08:10:08,197 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'command_string': ' descri Testing'} on 1 hosts
+2021-10-26 08:10:08,918 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 42, in netmiko_send_config
+    raise ValueError("Must specify either config_commands or config_file")
+ValueError: Must specify either config_commands or config_file
+
+2021-10-26 08:11:08,953 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 'int gi1/0/5'} on 1 hosts
+2021-10-26 08:11:10,988 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ' shutdown'} on 1 hosts
+2021-10-26 08:11:13,239 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ' descrip Testing'} on 1 hosts
+2021-10-26 08:11:59,760 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 'i'} on 1 hosts
+2021-10-26 08:12:01,745 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 'n'} on 1 hosts
+2021-10-26 08:12:03,986 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 't'} on 1 hosts
+2021-10-26 08:12:05,771 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ' '} on 1 hosts
+2021-10-26 08:12:08,238 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 'g'} on 1 hosts
+2021-10-26 08:12:11,476 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-26 08:12:11,514 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 'i'} on 1 hosts
+2021-10-26 08:12:14,105 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-26 08:12:14,142 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': '1'} on 1 hosts
+2021-10-26 08:12:28,096 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 'i'} on 1 hosts
+2021-10-26 08:12:30,690 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-26 08:12:30,724 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 'n'} on 1 hosts
+2021-10-26 08:12:33,307 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-26 08:12:33,349 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': 't'} on 1 hosts
+2021-10-26 08:12:35,935 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-26 08:12:35,967 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ' '} on 1 hosts
+2021-10-26 08:12:38,558 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-26 08:15:20,707 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 08:16:23,664 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 08:18:39,279 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 08:19:09,262 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 08:21:03,141 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 1 hosts
+2021-10-26 08:21:05,902 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-26 08:21:05,941 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': ' show run'} on 1 hosts
+2021-10-26 08:21:08,525 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-26 08:21:08,562 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': ' show vlan br'} on 1 hosts
+2021-10-26 08:21:11,424 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-26 08:21:24,296 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 1 hosts
+2021-10-26 08:21:27,056 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-26 08:22:15,611 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 08:22:32,587 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 1 hosts
+2021-10-26 08:22:44,168 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show run'} on 1 hosts
+2021-10-26 08:22:46,532 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': ' show vlan brief'} on 1 hosts
+2021-10-26 08:26:48,017 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'int\x08\x08\x08\x08'} on 1 hosts
+2021-10-26 08:27:10,667 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 08:27:41,171 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 08:28:25,738 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 08:29:25,596 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 09:31:07,964 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2021-10-26 09:31:07,968 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2021-10-26 09:32:46,890 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2021-10-26 09:32:46,893 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2021-10-26 09:34:58,922 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2021-10-26 09:34:58,925 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2021-10-26 09:42:49,946 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 09:42:49,949 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'function_tasks' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_validate_napalm.py", line 32, in function_tasks
+    task.birds.run(name="Show interface status", task=netmiko_send_command, command_string="show interface gi1/0/2 status")
+AttributeError: 'Task' object has no attribute 'birds'
+
+2021-10-26 09:58:08,336 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 09:58:08,337 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2021-10-26 09:58:08,338 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'interface_state' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_validate_napalm.py", line 21, in interface_state
+    output = task.run(task=netmiko_send_command, command="show interface gi1/0/1 status")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_command (failed)
+
+
+2021-10-26 09:58:08,338 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'function_tasks' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_validate_napalm.py", line 28, in function_tasks
+    task.run(task=interface_state)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: interface_state (failed)
+
+
+2021-10-26 10:14:35,701 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 2 hosts
+2021-10-26 10:14:56,689 - nornir.core.task -    ERROR -      start() - Host 'R2_eve': task 'Create a loopback interface' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1700, in enable
+    output += self.read_until_prompt()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 651, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 36, in netmiko_send_config
+    net_connect.enable()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco_base_connection.py", line 25, in enable
+    cmd=cmd, pattern=pattern, enable_pattern=enable_pattern, re_flags=re_flags
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1709, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2021-10-26 10:14:56,690 - nornir.core.task -    ERROR -      start() - Host 'R2_eve': task 'function_tasks' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_validate_static.py", line 31, in function_tasks
+    task.run(name="Create a loopback interface", task=netmiko_send_config, config_commands=["interface loop12", "description Created by nornir-scrapli"])
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Create a loopback interface (failed)
+
+
+2021-10-26 10:16:31,623 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 2 hosts
+2021-10-26 10:16:52,718 - nornir.core.task -    ERROR -      start() - Host 'R2_eve': task 'Create a loopback interface' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1700, in enable
+    output += self.read_until_prompt()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 651, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 36, in netmiko_send_config
+    net_connect.enable()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco_base_connection.py", line 25, in enable
+    cmd=cmd, pattern=pattern, enable_pattern=enable_pattern, re_flags=re_flags
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1709, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2021-10-26 10:16:52,719 - nornir.core.task -    ERROR -      start() - Host 'R2_eve': task 'function_tasks' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_validate_static.py", line 32, in function_tasks
+    task.run(name="Create a loopback interface", task=netmiko_send_config, config_commands=["interface loop12", "description Created by nornir-scrapli"])
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Create a loopback interface (failed)
+
+
+2021-10-26 10:18:18,362 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 2 hosts
+2021-10-26 10:18:39,407 - nornir.core.task -    ERROR -      start() - Host 'R2_eve': task 'Create a loopback interface' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1700, in enable
+    output += self.read_until_prompt()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 651, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 36, in netmiko_send_config
+    net_connect.enable()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco_base_connection.py", line 25, in enable
+    cmd=cmd, pattern=pattern, enable_pattern=enable_pattern, re_flags=re_flags
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1709, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2021-10-26 10:18:39,408 - nornir.core.task -    ERROR -      start() - Host 'R2_eve': task 'function_tasks' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_validate_static.py", line 32, in function_tasks
+    task.run(name="Create a loopback interface", task=netmiko_send_config, config_commands=["interface loop12", "description Created by nornir-scrapli"])
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: Create a loopback interface (failed)
+
+
+2021-10-26 10:19:12,082 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 10:19:38,463 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 10:41:16,873 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 1 hosts
+2021-10-26 10:41:16,876 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2021-10-26 10:41:44,465 -  nornir.core -  WARNING -        run() - Task 'napalm_get' has not been run – 0 hosts selected
+2021-10-26 10:41:48,142 -  nornir.core -  WARNING -        run() - Task 'napalm_get' has not been run – 0 hosts selected
+2021-10-26 10:43:13,947 -  nornir.core -  WARNING -        run() - Task 'napalm_get' has not been run – 0 hosts selected
+2021-10-26 10:43:47,602 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 1 hosts
+2021-10-26 10:43:47,606 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2021-10-26 10:44:18,181 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 1 hosts
+2021-10-26 10:44:18,187 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2021-10-26 10:45:30,532 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2021-10-26 10:45:30,537 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2021-10-26 10:46:09,610 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2021-10-26 10:46:09,614 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/__init__.py", line 99, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2021-10-26 10:46:30,187 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2021-10-26 10:47:05,283 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 10:47:32,799 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 1 hosts
+2021-10-26 10:47:39,158 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2021-10-26 10:48:31,877 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2021-10-26 10:49:56,857 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2021-10-26 10:50:43,302 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 1 hosts
+2021-10-26 10:50:45,134 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 1 hosts
+2021-10-26 10:51:43,732 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 1 hosts
+2021-10-26 11:00:44,553 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 1 hosts
+2021-10-26 11:23:58,734 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 1 hosts
+2021-10-27 04:28:47,412 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 1 hosts
+2021-10-27 04:31:13,404 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 1 hosts
+2021-10-27 04:32:12,932 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_facts()']} on 1 hosts
+2021-10-27 04:32:13,683 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_facts()'
+
+2021-10-27 04:32:58,350 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_facts']} on 1 hosts
+2021-10-27 04:33:51,352 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 1 hosts
+2021-10-27 04:36:56,924 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 2 hosts
+2021-10-27 04:36:59,288 - nornir.core.task -    ERROR -      start() - Host 'SW2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.7/dist-packages/napalm/ios/ios.py", line 170, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/base.py", line 92, in _netmiko_open
+    **netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.100.3:22
+
+
+Authentication failed.
+
+2021-10-27 04:37:14,275 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 2 hosts
+2021-10-27 04:37:35,135 - nornir.core.task -    ERROR -      start() - Host 'SW2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1700, in enable
+    output += self.read_until_prompt()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 651, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.7/dist-packages/napalm/ios/ios.py", line 170, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/base.py", line 101, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco_base_connection.py", line 25, in enable
+    cmd=cmd, pattern=pattern, enable_pattern=enable_pattern, re_flags=re_flags
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1709, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2021-10-27 04:38:44,919 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 2 hosts
+2021-10-27 04:39:05,808 - nornir.core.task -    ERROR -      start() - Host 'SW2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1700, in enable
+    output += self.read_until_prompt()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 651, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.7/dist-packages/napalm/ios/ios.py", line 170, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/base.py", line 101, in _netmiko_open
+    self._netmiko_device.enable()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco_base_connection.py", line 25, in enable
+    cmd=cmd, pattern=pattern, enable_pattern=enable_pattern, re_flags=re_flags
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1709, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2021-10-27 04:40:39,261 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 2 hosts
+2021-10-27 04:45:27,514 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 2 hosts
+2021-10-27 04:45:53,209 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 2 hosts
+2021-10-27 04:46:17,245 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 2 hosts
+2021-10-27 04:46:19,691 - nornir.core.task -    ERROR -      start() - Host 'SW2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.7/dist-packages/napalm/ios/ios.py", line 170, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/base.py", line 92, in _netmiko_open
+    **netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.100.2:22
+
+
+Authentication failed.
+
+2021-10-27 04:46:19,833 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.7/dist-packages/napalm/ios/ios.py", line 170, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/base.py", line 92, in _netmiko_open
+    **netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-27 04:46:33,059 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 2 hosts
+2021-10-27 04:46:35,452 - nornir.core.task -    ERROR -      start() - Host 'SW2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.7/dist-packages/napalm/ios/ios.py", line 170, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/base.py", line 92, in _netmiko_open
+    **netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.100.2:22
+
+
+Authentication failed.
+
+2021-10-27 04:46:35,643 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.7/dist-packages/napalm/ios/ios.py", line 170, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/base.py", line 92, in _netmiko_open
+    **netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-27 04:46:47,046 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 2 hosts
+2021-10-27 04:46:49,434 - nornir.core.task -    ERROR -      start() - Host 'SW2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.7/dist-packages/napalm/ios/ios.py", line 170, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/base.py", line 92, in _netmiko_open
+    **netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.100.2:22
+
+
+Authentication failed.
+
+2021-10-27 04:46:49,632 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 446, in connect
+    passphrase,
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 764, in _auth
+    raise saved_exception
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/client.py", line 751, in _auth
+    self._transport.auth_password(username, password)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/transport.py", line 1509, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/tasks/napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 502, in get_connection
+    extras=conn.extras,
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/inventory.py", line 553, in open_connection
+    configuration=configuration,
+  File "/usr/local/lib/python3.7/dist-packages/nornir_napalm/plugins/connections/__init__.py", line 57, in open
+    connection.open()
+  File "/usr/local/lib/python3.7/dist-packages/napalm/ios/ios.py", line 170, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/napalm/base/base.py", line 92, in _netmiko_open
+    **netmiko_optional_args
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 350, in __init__
+    self._open()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 192.168.160.10:22
+
+
+Authentication failed.
+
+2021-10-27 04:47:01,391 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 2 hosts
+2021-10-27 04:48:04,060 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 3 hosts
+2021-10-27 04:50:28,452 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 3 hosts
