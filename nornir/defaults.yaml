@@ -1,5 +1,6 @@
 # defaults.yaml
 ---
+#for all cisco devices (username with privilege 15 it can by pass enable password)
 platform: ios
 username: admin
 password: cisco123

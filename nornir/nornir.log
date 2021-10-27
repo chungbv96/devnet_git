@@ -1574,3 +1574,836 @@ Authentication failed.
 2021-10-27 04:47:01,391 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 2 hosts
 2021-10-27 04:48:04,060 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 3 hosts
 2021-10-27 04:50:28,452 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 3 hosts
+2021-10-27 05:23:11,998 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 3 hosts
+2021-10-27 05:23:34,850 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_interfaces_ip']} on 3 hosts
+2021-10-27 07:47:51,182 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 4 hosts
+2021-10-27 07:47:51,780 - nornir.core.task -    ERROR -      start() - Host 'Router2-eve': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 33, in netmiko_send_config
+    raise ValueError("netmiko_send_config does not support dry_run")
+ValueError: netmiko_send_config does not support dry_run
+
+2021-10-27 07:47:51,781 - nornir.core.task -    ERROR -      start() - Host 'Router2-eve': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 12, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:47:51,801 - nornir.core.task -    ERROR -      start() - Host 'Router3-eve': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 33, in netmiko_send_config
+    raise ValueError("netmiko_send_config does not support dry_run")
+ValueError: netmiko_send_config does not support dry_run
+
+2021-10-27 07:47:51,802 - nornir.core.task -    ERROR -      start() - Host 'Router3-eve': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 12, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:47:51,927 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 33, in netmiko_send_config
+    raise ValueError("netmiko_send_config does not support dry_run")
+ValueError: netmiko_send_config does not support dry_run
+
+2021-10-27 07:47:51,928 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 12, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:47:52,341 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 33, in netmiko_send_config
+    raise ValueError("netmiko_send_config does not support dry_run")
+ValueError: netmiko_send_config does not support dry_run
+
+2021-10-27 07:47:52,342 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 12, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:48:26,100 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 4 hosts
+2021-10-27 07:48:26,672 - nornir.core.task -    ERROR -      start() - Host 'Router3-eve': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 33, in netmiko_send_config
+    raise ValueError("netmiko_send_config does not support dry_run")
+ValueError: netmiko_send_config does not support dry_run
+
+2021-10-27 07:48:26,672 - nornir.core.task -    ERROR -      start() - Host 'Router3-eve': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 12, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:48:26,686 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 33, in netmiko_send_config
+    raise ValueError("netmiko_send_config does not support dry_run")
+ValueError: netmiko_send_config does not support dry_run
+
+2021-10-27 07:48:26,686 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 12, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:48:26,794 - nornir.core.task -    ERROR -      start() - Host 'Router2-eve': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 33, in netmiko_send_config
+    raise ValueError("netmiko_send_config does not support dry_run")
+ValueError: netmiko_send_config does not support dry_run
+
+2021-10-27 07:48:26,795 - nornir.core.task -    ERROR -      start() - Host 'Router2-eve': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 12, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:48:26,810 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 33, in netmiko_send_config
+    raise ValueError("netmiko_send_config does not support dry_run")
+ValueError: netmiko_send_config does not support dry_run
+
+2021-10-27 07:48:26,811 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 12, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:49:08,215 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 4 hosts
+2021-10-27 07:49:33,443 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1912, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 07:49:33,443 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 10, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:51:45,104 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 4 hosts
+2021-10-27 07:51:45,689 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1808, in send_config_from_file
+    with io.open(config_file, "rt", encoding="utf-8") as cfg_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config_textfile'
+
+2021-10-27 07:51:45,690 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 10, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:51:45,927 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1808, in send_config_from_file
+    with io.open(config_file, "rt", encoding="utf-8") as cfg_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config_textfile'
+
+2021-10-27 07:51:45,927 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 10, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:51:45,988 - nornir.core.task -    ERROR -      start() - Host 'Router3-eve': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1808, in send_config_from_file
+    with io.open(config_file, "rt", encoding="utf-8") as cfg_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config_textfile'
+
+2021-10-27 07:51:45,989 - nornir.core.task -    ERROR -      start() - Host 'Router3-eve': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 10, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:51:46,001 - nornir.core.task -    ERROR -      start() - Host 'Router2-eve': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1808, in send_config_from_file
+    with io.open(config_file, "rt", encoding="utf-8") as cfg_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config_textfile'
+
+2021-10-27 07:51:46,001 - nornir.core.task -    ERROR -      start() - Host 'Router2-eve': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 10, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:52:28,126 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 4 hosts
+2021-10-27 07:52:53,147 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1912, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 07:52:53,148 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 10, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile")
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 07:55:40,334 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 4 hosts
+2021-10-27 07:55:40,335 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 07:55:40,338 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 07:55:40,342 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 07:55:40,360 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 07:55:44,564 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 07:55:45,527 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 07:55:46,634 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 07:55:47,057 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 07:56:07,571 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1496, in send_command
+    new_data = self.read_until_pattern(pattern=re.escape(cmd))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 07:56:27,947 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1496, in send_command
+    new_data = self.read_until_pattern(pattern=re.escape(cmd))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 07:56:37,855 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1537, in send_command
+    search_pattern
+OSError: Search pattern never detected in send_command: OPS\-SW01\#show
+
+2021-10-27 07:56:37,999 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1537, in send_command
+    search_pattern
+OSError: Search pattern never detected in send_command: OPS\-SW01\#
+
+2021-10-27 08:01:51,259 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 4 hosts
+2021-10-27 08:02:16,308 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1912, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 08:02:16,309 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 10, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile") #cau hinh dua tren file co san
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 08:02:37,899 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 4 hosts
+2021-10-27 08:03:02,949 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1912, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 08:03:02,950 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 10, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile") #cau hinh dua tren file co san (config_textfile)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 08:07:32,105 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 4 hosts
+2021-10-27 08:07:32,106 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 08:07:32,108 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 08:07:32,110 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 08:07:32,114 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 08:07:36,408 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 08:07:36,939 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 08:07:38,118 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 08:07:57,444 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1930, in send_config_set
+    output += self.exit_config_mode()
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco_base_connection.py", line 54, in exit_config_mode
+    return super().exit_config_mode(exit_config=exit_config, pattern=pattern)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1779, in exit_config_mode
+    if self.check_config_mode():
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco/cisco_ios.py", line 32, in check_config_mode
+    return super().check_config_mode(check_string=check_string, pattern=pattern)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/cisco_base_connection.py", line 38, in check_config_mode
+    return super().check_config_mode(check_string=check_string, pattern=pattern)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1740, in check_config_mode
+    output = self.read_until_pattern(pattern=pattern)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 08:07:57,445 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 08:08:17,720 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1496, in send_command
+    new_data = self.read_until_pattern(pattern=re.escape(cmd))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 08:08:37,796 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1496, in send_command
+    new_data = self.read_until_pattern(pattern=re.escape(cmd))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 08:08:47,114 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 4 hosts
+2021-10-27 08:08:47,116 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 08:08:47,117 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 08:08:47,119 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 08:08:47,135 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'config_textfile'} on 3 hosts
+2021-10-27 08:08:51,287 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 08:08:51,871 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 08:08:53,144 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 08:09:13,599 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1912, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 08:09:13,600 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int brief'} on 3 hosts
+2021-10-27 08:09:33,734 - nornir.core.task -    ERROR -      start() - Host 'SW1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_command.py", line 32, in netmiko_send_command
+    result = net_connect.send_command(command_string, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/utilities.py", line 500, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1496, in send_command
+    new_data = self.read_until_pattern(pattern=re.escape(cmd))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 08:14:08,383 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 1 hosts
+2021-10-27 08:14:33,268 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1912, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 08:14:33,268 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 10, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile") #cau hinh dua tren file co san (config_textfile)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 08:16:23,673 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 4 hosts
+2021-10-27 08:16:48,795 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 573, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "/usr/local/lib/python3.7/dist-packages/paramiko/channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/usr/local/lib/python3.7/dist-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 40, in netmiko_send_config
+    result = net_connect.send_config_from_file(config_file=config_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1809, in send_config_from_file
+    return self.send_config_set(cfg_file, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 1912, in send_config_set
+    new_output = self.read_until_pattern(pattern=re.escape(cmd.strip()))
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 655, in read_until_pattern
+    return self._read_channel_expect(*args, **kwargs)
+  File "/usr/local/lib/python3.7/dist-packages/netmiko/base_connection.py", line 584, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetmikoTimeoutException: Timed-out reading channel, data not available.
+
+2021-10-27 08:16:48,795 - nornir.core.task -    ERROR -      start() - Host 'vMX1': task 'baseconfig' failed with traceback:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "nornir_configfile.py", line 10, in baseconfig
+    ipvzero.run(task=netmiko_send_config, config_file= "config_textfile") #cau hinh dua tren file co san (config_textfile)
+  File "/usr/local/lib/python3.7/dist-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2021-10-27 08:20:11,964 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 3 hosts
+2021-10-27 08:23:32,048 -  nornir.core -  WARNING -        run() - Task 'baseconfig' has not been run – 0 hosts selected
+2021-10-27 08:24:26,599 -  nornir.core -  WARNING -        run() - Task 'baseconfig' has not been run – 0 hosts selected
+2021-10-27 08:24:32,356 -  nornir.core -  WARNING -        run() - Task 'baseconfig' has not been run – 0 hosts selected
+2021-10-27 08:24:42,087 -  nornir.core -  WARNING -        run() - Task 'baseconfig' has not been run – 0 hosts selected
+2021-10-27 08:27:29,448 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 3 hosts
+2021-10-27 08:34:20,462 -  nornir.core -  WARNING -        run() - Task 'baseconfig' has not been run – 0 hosts selected
+2021-10-27 08:34:49,269 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 1 hosts
+2021-10-27 08:35:51,492 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 2 hosts
+2021-10-27 08:39:09,222 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 2 hosts
+2021-10-27 08:52:07,822 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 2 hosts
+2021-10-27 08:52:46,973 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 2 hosts
+2021-10-27 08:53:30,937 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 2 hosts
+2021-10-27 08:56:54,921 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 2 hosts
+2021-10-27 08:57:16,755 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 3 hosts
+2021-10-27 08:58:20,870 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 2 hosts
+2021-10-27 09:02:45,605 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 3 hosts

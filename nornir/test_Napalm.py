@@ -17,3 +17,5 @@ output3=router.get_facts()
 print(json.dumps(output3, indent=5))
 output4=router.get_arp_table()#=>Lấy bảng arp của router
 print(json.dumps(output4, indent=5))
+
+

@@ -4,18 +4,38 @@ SW1:
   hostname: 192.168.160.10
   groups:
     - cisco
+  data:
+    eve: false 
+    rack: 'F1'
 
+Router1-eve:
+  hostname: 192.168.100.1
+  groups:
+    - cisco
+  data:
+    eve: true
+    rack: 'F1'
+        
 Router2-eve:
   hostname: 192.168.100.2
   groups:
     - cisco
+  data:
+    eve: true
+    rack: 'F1'
 
 Router3-eve:
   hostname: 192.168.100.3
   groups:
     - cisco
+  data: 
+    eve: true
+    rack: 'F1'
 
-vMX:
+vMX1:
   hostname: 192.168.100.4
   groups:
     - juniper
+  data:
+    eve: true
+    rack: 'F1'

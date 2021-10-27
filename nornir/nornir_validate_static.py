@@ -28,10 +28,14 @@ nr = InitNornir(config_file="config.yaml")
 
 # cach2: su dung ham
 def function_tasks(task):
-    task.run(name="Show interface status", task=netmiko_send_command, command_string="show interface gi1/0/1 status")
+    task.run(name="Show interface status", task=netmiko_send_command, command_string="show ip int br")
     task.run(name="Create a loopback interface", task=netmiko_send_config, config_commands=["interface loop12", "description Created by nornir-netmiko"])
 
-tasks_result = nr.run(task=function_tasks)
+
+notactor = nr.filter(F(groups__contains="cisco") & F(rack = 'F1'))     #chi cau hinh voi nhom thiet bi la cisco va du lieu thuoc ve nhom rack = 'F1'
+# https://nornir.readthedocs.io/en/latest/howto/advanced_filtering.html
+
+tasks_result = notactor.run(task=function_tasks)
 
 
 print_result(tasks_result)

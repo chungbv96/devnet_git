@@ -29,6 +29,5 @@ get_interfaces_ip_result = cisco_hosts.run(napalm_get, getters=['get_interfaces_
 
 print_result(get_interfaces_ip_result)
 
-
 #print_result(results)
 
