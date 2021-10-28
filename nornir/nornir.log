@@ -2407,3 +2407,4 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
 2021-10-27 08:57:16,755 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 3 hosts
 2021-10-27 08:58:20,870 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 2 hosts
 2021-10-27 09:02:45,605 -  nornir.core -     INFO -        run() - Running task 'baseconfig' with args {} on 3 hosts
+2021-10-28 03:11:44,819 -  nornir.core -     INFO -        run() - Running task 'function_tasks' with args {} on 4 hosts
