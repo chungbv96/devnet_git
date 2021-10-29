@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 access_template = [
     "switchport mode access",
     "switchport access vlan {}",

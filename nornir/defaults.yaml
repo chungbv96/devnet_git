@@ -4,3 +4,6 @@
 platform: ios
 username: admin
 password: cisco123
+
+# Bât kỳ giá trị nào ở defaults.yaml có thể được ghi đè ở groups.yaml hoặc hosts.yaml. 
+# có nghĩa là nếu khai báo nornir sẽ lấy thông tin username; password; platform... ở groups.yaml hoặc hosts.yaml trước khi lấy ở đây. Nếu ở đó có khai báo các giá trị đó

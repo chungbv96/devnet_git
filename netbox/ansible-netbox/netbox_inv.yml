@@ -1,0 +1,12 @@
+---
+# https://galaxy.ansible.com/netbox/netbox
+# NOTE: Installing collections with ansible-galaxy is only supported in ansible 2.9+
+plugin:  netbox
+api_endpoint: http://192.168.10.236:8000
+token: '0123456789abcdef0123456789abcdef01234567'
+validate_certs: False
+config_context: False
+group_by:
+  - device_roles
+compose:
+  ansible_network_os: platform.slug
