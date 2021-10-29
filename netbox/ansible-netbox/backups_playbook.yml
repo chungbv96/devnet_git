@@ -2,7 +2,8 @@
 - name: Playbook to backup configs on Cisco Routers
   connection: network_cli
   hosts: device_roles_router
-  hosts: device_roles_{ten Device Roles trong netbox}
+  #hosts: device_roles_{ten Device Roles trong netbox}
+  #https://docs.ansible.com/ansible/latest/collections/netbox/netbox/nb_inventory_inventory.html
   gather_facts: False
 
   tasks:
